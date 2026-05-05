@@ -436,7 +436,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 		// [!code focus:12]
 		// [!code ++:9]
 		const radioGroupLabel = new LabelBuilder().setLabel('Radio Group').setRadioGroupComponent((radioGroup) =>
-			radioGroup.setCustomId('checkboxes').addOptions([
+			radioGroup.setCustomId('radiogroup').addOptions([
 				{ label: 'Option 1', value: 'option_1', description: 'The first option' },
 				{ label: 'Option 2', value: 'option_2', description: 'The default option', default: true },
 				{ label: 'Option 3', value: 'option_3' },
@@ -561,6 +561,10 @@ const checkbox = new CheckboxBuilder()
 	// Set the optional identifier for component
 	.setId(1);
 ```
+
+Restart your bot and invoke the `/ping` command again. You should see the modal as shown below:
+
+![Additional Modal Example](./images/additional-modal-example.png)
 
 ### Receiving Additional Modal Components
 
