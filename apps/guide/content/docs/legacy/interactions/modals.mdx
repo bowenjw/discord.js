@@ -461,7 +461,7 @@ A Radio Group component can be customized to apply validation via the following 
 const radioGroup = new RadioGroupBuilder()
 	// Set the optional identifier for component
 	.setId(1)
-	// Require a option to be selected in this component (defaults to true)
+	// Require an option to be selected in this component (defaults to true)
 	.setRequired(true);
 ```
 
@@ -512,7 +512,7 @@ const checkboxes = new CheckboxGroupBuilder()
 	.setMinValues(1)
 	// Maximum number of boxes that can be checked (defaults to 1); max 10
 	.setMaxValues(1)
-	// Require a box to be check in this component (defaults to true)
+	// Require a box to be checked in this component (defaults to true)
 	.setRequired(true);
 ```
 
@@ -569,7 +569,7 @@ Restart your bot and invoke the `/ping` command again. You should see the modal 
 ### Receiving Additional Modal Components
 
 ```js
-client.on(Events.InteractionCreate, (interaction) => {
+client.on(Events.InteractionCreate, async (interaction) => {
 	if (!interaction.isModalSubmit()) return;
 	if (interaction.customId === 'myModal') {
 		await interaction.reply({ content: 'Your submission was received successfully!' });
